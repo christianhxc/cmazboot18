@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: cmazboot18
-        image: christianhxc/cmazboot18:1.0
+        image: christianhxc/azboot18:1.0
         ports:
         - containerPort: 80
         resources:
