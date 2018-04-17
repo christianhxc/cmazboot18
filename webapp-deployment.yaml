@@ -1,0 +1,37 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: cmazboot18
+spec:
+  replicas: 2
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+  minReadySeconds: 5 
+  template:
+    metadata:
+      labels:
+        app: cmazboot18
+    spec:
+      containers:
+      - name: cmazboot18
+        image: christianhxc/cmazboot18:1.0
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            cpu: 250m
+          limits:
+            cpu: 500m
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: cmazboot18
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 80
+  selector:
+    app: cmazboot18

@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  azboot18:
+    image: azboot18
+    build:
+      context: .
+      dockerfile: Dockerfile
