@@ -10,6 +10,7 @@ kubectl config unset users.clusterUser_cmazboot18_cmazboot18
 ```
 kubectl config unset contexts.cmazboot18
 ```
+```
 kubectl config unset clusters.cmazboot18
 ```
 
@@ -56,6 +57,7 @@ kubectl get pods
 ```
 ```
 kubectl proxy
+```
 ```
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/master/src/deploy/recommended/kubernetes-dashboard.yaml
 ```
